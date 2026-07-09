@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سپر تمرکز</title>
+  <link rel="stylesheet" href="blocked.css">
+</head>
+<body>
+  <div class="container">
+    <!-- بخش ۱: تنفس -->
+    <div class="breath-section">
+      <div class="breath-circle" id="breathCircle"></div>
+      <p class="breath-text">یک نفس عمیق بکش…</p>
+    </div>
+
+    <!-- بخش ۲: پیام اصلی + آمار افقی -->
+    <div class="message-section">
+      <div class="icon-shield">🛡️</div>
+      <h1 class="main-title">حواست رو جمع کن!</h1>
+      <p class="blocked-url">سایت: <span id="siteName">---</span></p>
+    </div>
+
+    <!-- کارت آمار افقی -->
+    <div class="stats-row">
+      <div class="stat-item">
+        <span class="stat-label">تلاش‌های امروز</span>
+        <span class="stat-value" id="attemptsToday">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">آخرین تلاش</span>
+        <span class="stat-value" id="lastAttempt">---</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">امتیاز</span>
+        <span class="stat-value" id="focusScore">-</span>
+      </div>
+    </div>
+
+    <!-- بخش ۳: جملهٔ انگیزشی -->
+    <div class="quote-section">
+      <p id="quoteText">"بهترین راه برای پیش‌بینی آینده، ساختن آن است."</p>
+      <p class="quote-author">— آبراهام لینکلن</p>
+    </div>
+
+    <!-- بخش ۴: میانبرهای سازنده (۲ ردیف × ۵ ستون) -->
+    <div class="shortcuts-section">
+      <h2 class="section-title">مسیرهای سازنده</h2>
+      <div class="shortcuts-grid" id="shortcutsGrid"></div>
+    </div>
+
+    <!-- بخش ۵: دکمهٔ بازگشت -->
+    <div class="action-section">
+      <button class="btn-return" id="btnReturn">بازگشت به مسیر</button>
+    </div>
+  </div>
+
+  <script src="blocked.js"></script>
+</body>
+</html>

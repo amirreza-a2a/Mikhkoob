@@ -1,0 +1,5 @@
+PyQt6>=6.5
+opencv-python>=4.8
+psutil>=5.9
+arabic-reshaper>=3.0
+python-bidi>=0.4

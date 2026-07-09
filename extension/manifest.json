@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Mikhkoob",
+  "version": "1.0",
+  "description": "افزونه مدیریت تمرکز - مسدودساز هوشمند با scope always",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "storage",
+    "webNavigation",
+    "tabs"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "blocked.css", "blocked.js", "assets/fonts/Vazir.ttf"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "mikhkoob@example.org",
+      "strict_min_version": "112.0"
+    }
+  }
+}

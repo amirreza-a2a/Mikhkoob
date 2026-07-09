@@ -1,0 +1,200 @@
+:root {
+  --bg: #1e1e1e;
+  --text: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #aaaaaa;
+  --accent: #a29bfe;
+  --accent-dark: #6c5ce7;
+  --danger: #ff6b6b;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Vazir', 'Tahoma', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  direction: rtl;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* --- تنفس --- */
+.breath-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.breath-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, var(--accent-dark) 100%);
+  animation: breathe 6s ease-in-out infinite;
+  box-shadow: 0 0 20px rgba(108, 92, 231, 0.4);
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.4); opacity: 1; }
+}
+.breath-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* --- پیام اصلی --- */
+.message-section {
+  text-align: center;
+  margin-bottom: 0;
+}
+.icon-shield {
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 2px 0;
+}
+.blocked-url {
+  color: var(--danger);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* --- آمار افقی --- */
+.stats-row {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 10px 5px;
+  backdrop-filter: blur(5px);
+  gap: 4px;
+}
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.stat-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* --- جملهٔ انگیزشی --- */
+.quote-section {
+  text-align: center;
+  max-width: 90%;
+}
+.quote-section p:first-child {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.5;
+}
+.quote-author {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+/* --- میانبرهای سازنده --- */
+.section-title {
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+.shortcuts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  width: 100%;
+}
+.shortcut-btn {
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  padding: 6px 4px;
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-decoration: none;
+  font-size: 12px;
+  height: 44px;
+}
+.shortcut-btn:hover {
+  background: rgba(162, 155, 254, 0.2);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+.shortcut-btn .favicon {
+  width: 18px;
+  height: 18px;
+}
+.empty-slot {
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 20px;
+}
+.empty-slot:hover {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+/* --- دکمهٔ بازگشت --- */
+.action-section {
+  width: 100%;
+  text-align: center;
+}
+.btn-return {
+  background: linear-gradient(90deg, var(--accent-dark) 0%, var(--accent) 100%);
+  border: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 14px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 100%;
+  max-width: 320px;
+}
+.btn-return:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(162, 155, 254, 0.6);
+}

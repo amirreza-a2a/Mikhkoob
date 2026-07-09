@@ -1,0 +1,17 @@
+[
+  {
+    "name": "دروس تخصصی",
+    "minutes": 75,
+    "default": false
+  },
+  {
+    "name": "دروس عمومی ",
+    "minutes": 30,
+    "default": false
+  },
+  {
+    "name": "حل تمرین",
+    "minutes": 120,
+    "default": false
+  }
+]
